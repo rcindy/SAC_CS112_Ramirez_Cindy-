@@ -9,36 +9,36 @@ public class Lab5 {
         //create a scanner input from the command window
         Scanner input = new Scanner(System.in);
         
-        double number1;
-        double number2;
+        int number1;
+        int number2;
         
         
         
         System.out.printf("Enter first number %d%n: ");
-        number1 = input.nextDouble();
+        number1 = input.nextInt();
         
         System.out.printf("Enter second number %d%n: ");
-        number2 = input.nextDouble(); 
+        number2 = input.nextInt(); 
         
         System.out.println("Hello, you entered: " + number1 + " and " + number2 );
         
         // sum of two numbers 
        
-        double sum = number1 + number2;
-        System.out.println("The sum is " + sum);
+        int sum = number1 + number2;
+        System.out.printf("The sum is %d%n ", + sum);
         
         //subtract two numbers 
         
-        double difference = number1 - number2;
-        System.out.println("The difference is  %d%n " + difference);
+        int difference = number1 - number2;
+        System.out.printf("The difference is  %d%n ", + difference);
         
         // multiply two numbers
-        double multiply = number1 * number2;
-        System.out.println("The muliplication is %d%n " + multiply);
+        int multiply = number1 * number2;
+        System.out.printf("The muliplication is %d%n ", + multiply);
         
         // divive two numbers 
-        double divide = number1 / number2;
-        System.out.println("Dividing both numbers is: %d%n " + divide);
+        int divide = number1 / number2;
+        System.out.printf("Dividing both numbers is: %d%n ", + divide);
         
     }
     
