@@ -1,4 +1,4 @@
-import java.util.Scanner; // program uses class Scanner 
+ import java.util.Scanner; // program uses class Scanner 
 public class Lab5 {
 
     /**
@@ -14,10 +14,10 @@ public class Lab5 {
         
         
         
-        System.out.printf("Enter first number: ");
+        System.out.printf("Enter first number %d%n: ");
         number1 = input.nextDouble();
         
-        System.out.printf("Enter second number: ");
+        System.out.printf("Enter second number %d%n: ");
         number2 = input.nextDouble(); 
         
         System.out.println("Hello, you entered: " + number1 + " and " + number2 );
@@ -30,15 +30,15 @@ public class Lab5 {
         //subtract two numbers 
         
         double difference = number1 - number2;
-        System.out.println("The difference is " + difference);
+        System.out.println("The difference is  %d%n " + difference);
         
         // multiply two numbers
         double multiply = number1 * number2;
-        System.out.println("The muliplication is " + multiply);
+        System.out.println("The muliplication is %d%n " + multiply);
         
         // divive two numbers 
         double divide = number1 / number2;
-        System.out.println("Dividing both numbers is: " + divide);
+        System.out.println("Dividing both numbers is: %d%n " + divide);
         
     }
     
