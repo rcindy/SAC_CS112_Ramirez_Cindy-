@@ -1,0 +1,29 @@
+4.11  Explain what happens when a Java program attempts to divide one integer by another. 
+       What happens to the fractional part of the calculation? How can you avoid that outcome?
+When dividing two integers, the result is an integer type. It returns to whole number of the result with no rounding. 
+I can avoid this outcome by setting a variable to a float variable or type casting. I can also use the %. 
+4.12
+Describe two ways in which control statements can be combined? 
+  Selection statements use if-else statements to perform a condition. The Repetition statements can use iteration statements
+like while, do … while, and for. 
+4.13
+What type of repetition would be appropriate for calculating the sum of the first 100 positive integers?
+What type would be appropriate for calculating the sum of an arbitrary number of positive integers? 
+Briefly describe how each of these tasks could be performed.
+  A for statement type of repetition can be used for calculating the sum of the first 100 positive integers because 
+the user knows we need to use the loop 100 times. The user can create a variable and set it equal to 0, and create a boolean test: i<100,
+and have the iteration expression to i++ to terminate the loop. 
+  A while statement can be used for calculating the sum of an arbitrary number of positive integers. The while loop 
+will only have a Boolean test. Furthermore, a while loop is good when we do not know how many times to loop and just 
+want to keep in the while loop while some condition is true. A while loop consists of declaring and initializing the 
+counter: i=0. The while statement can be while 
+( i<9); { System.out.println(i); i++}. 
+4.14 What is the difference between preincrementing and posincrementing a variable? 
+  PREINCREMENTING: (++a) Increment by 1, then use new value of “a” in the expression in which “a” resides.
+  POSTINCREMENTING: (a++) Use current value of “a” in the expression in which “a” resides, then increment by 1.
+4.15) 
+a) initialize age, if should not have a semi-colon, ending quotation should be inside the else statement
+b) total not initialized and System.out.println() statement is missing inside while brackets.
+c) missing variables and initialization counter, missing statement outputs, no open or closing braces
+d) finishing bracket needed, variables and initialization, statement outputs. 
+
