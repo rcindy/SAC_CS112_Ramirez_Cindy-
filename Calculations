@@ -25,20 +25,20 @@ public class Lab5 {
         // sum of two numbers 
        
         int sum = number1 + number2;
-        System.out.printf("The sum is %d%n ", + sum);
+        System.out.printf("The sum is %d%n ",sum);
         
         //subtract two numbers 
         
         int difference = number1 - number2;
-        System.out.printf("The difference is  %d%n ", + difference);
+        System.out.printf("The difference is  %d%n ",difference);
         
         // multiply two numbers
         int multiply = number1 * number2;
-        System.out.printf("The muliplication is %d%n ", + multiply);
+        System.out.printf("The muliplication is %d%n ",multiply);
         
         // divive two numbers 
         int divide = number1 / number2;
-        System.out.printf("Dividing both numbers is: %d%n ", + divide);
+        System.out.printf("Dividing both numbers is: %d%n ",divide);
         
     }
     
