@@ -1,0 +1,94 @@
+package guessinggame;
+import java.util.Scanner;
+/**
+ *
+ * @author Cindy
+ */
+public class GuessingGame 
+{
+    static Scanner input = new Scanner(System.in);
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) 
+    {
+        int goodGuesses; // after no 
+        int badGuesses; // after no
+        int total_Games_Played = 1; // after no
+        int guessPercentage_eachGame; // after each game
+        int overallGuess_percentage; // after no
+        
+     
+        
+        System.out.println(" Lets play a guessing game");
+        do
+        {
+            playAround();
+        } while (askForAnotherRound());
+        System.out.println(" Thank you for playing");
+        
+        
+    }
+    
+    public static void playAround()
+    {
+        boolean validInput;
+        int guess_number, guess;
+        String answer;
+    
+        
+        //random number
+        guess_number = getRandomNumber();
+        
+        // get guess
+        System.out.println(" I am thinking of a number between 1 and 10");
+        System.out.println(" What do you think it is?? ");
+        guess = getGuess();
+        
+        // check guess
+        if (guess == guess_number)
+            System.out.println(" you are right");
+        else 
+            System.out.println(" You are wrong. The number was " + guess_number);
+    }
+    public static int getRandomNumber()
+    {
+        return (int) (Math.random() * 10) +1;
+    }
+    
+    public static int getGuess()
+    {
+        while (true)
+        {
+            int guess = input.nextInt();
+            if ((guess < 1)|| (guess > 10))
+            {
+                System.out.println("Try again");
+            }
+            else 
+                return guess;
+        }
+    }
+    
+    public static boolean askForAnotherRound()
+    {
+        while(true)
+        {
+            String answer;
+            System.out.println("play again?? y or n");
+            answer = input.next();
+            if (answer.equalsIgnoreCase("y"))
+                return true;
+            else if (answer.equalsIgnoreCase("n"))
+                return false;
+                
+        }
+        
+    }
+  
+ 
+    
+}
+
+        
