@@ -1,0 +1,179 @@
+package week6_homwork;
+
+import java.util.Scanner; 
+
+import java.util.Random;
+
+import java.util.Arrays;
+
+public class NewEmpty
+
+{
+
+    // Main method begins execution of Java application
+
+    public static void main(String[] args)
+
+    {
+
+        Scanner input = new Scanner(System.in);
+
+        int user_answer; 
+       
+        int totalGamesPlayed =1;
+        int total_odd =0; 
+        int total_even=0; 
+        int[] list_die= new int[100];
+        String[] list_User=new String[100];
+        String[] list_Result=new String[100];
+        int i=0;
+        int userWin_totals=0;
+        double winning_percentage;
+        
+        int odd =1;
+
+        
+
+        do
+
+        {   
+
+           
+
+            int die = 1 + (int)(Math.random()*6);
+
+            list_die[i]= die;
+
+            System.out.println("Enter a guess number with (1) Odd or (2) Even:");
+
+            user_answer = input.nextInt();
+            if(user_answer==1)
+
+                list_User[i]="Odd";
+
+            else
+
+                list_User[i]="Even";
+
+            
+
+            if(die%2==0)
+
+                total_even++;
+
+            else
+
+                total_odd++;
+
+            if(die%2==0 && user_answer==2)
+
+            {
+
+                userWin_totals ++;
+
+                list_Result[i]="Win";
+
+                System.out.println("You win!");
+
+            }
+
+            else if (die%2!=0 && user_answer==1)
+
+            {
+
+                userWin_totals ++;
+
+                System.out.println("You win!");
+
+                list_Result[i]="Win";
+
+            }
+
+            else
+
+            {
+
+                System.out.println("You lose!");
+
+                list_Result[i]="Lose";
+
+            }
+
+            
+
+        
+
+            
+
+            System.out.println("Would you like to play again? Y/N");
+
+            String answer = input.next(); 
+
+            String upperCaseAnswer = answer.toUpperCase(); 
+
+            if(upperCaseAnswer.equals("Y"))
+
+            {
+
+                i++;
+
+                totalGamesPlayed ++;
+
+            }
+
+            else
+
+            {             
+
+                //create rows/columns of text representing array game history
+                System.out.printf("Game history is:%n");
+
+                System.out.printf("                    ");
+
+                System.out.printf("Die number     ");
+
+                System.out.printf("User guess     ");
+
+                System.out.printf("Win/Lose%n");
+
+                for(int row=0; row<totalGamesPlayed;row++)
+
+                {
+
+                    System.out.printf("           Game %d", row +1);
+
+                    //Out put game history
+
+                    System.out.printf("       %d",list_die[row]);
+
+                    System.out.printf("             %s",list_User[row]);
+
+                    System.out.printf("          %s",list_Result[row]);
+
+                    System.out.println();
+
+                }
+
+                
+
+                i=0;
+
+            }
+
+        }while(i!=0 && i<100);
+
+        
+
+        winning_percentage = (float)((userWin_totals*100)/totalGamesPlayed);
+
+        System.out.printf("%nYou've won %d number of times.",userWin_totals);
+
+        System.out.printf("%nYou've played %d number of times.%n",totalGamesPlayed);
+
+        System.out.printf("The system generate %d number of Odds and %d number of Even.%n",total_odd, total_even);
+
+        System.out.printf("Your winning percentage is %s.%nn",winning_percentage+"%");
+
+    } 
+
+ } 
