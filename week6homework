@@ -66,7 +66,6 @@ public class NewEmpty
                 total_odd++;
 
             if(die%2==0 && user_answer==2)
-
             {
 
                 userWin_totals ++;
@@ -78,7 +77,6 @@ public class NewEmpty
             }
 
             else if (die%2!=0 && user_answer==1)
-
             {
 
                 userWin_totals ++;
@@ -105,7 +103,7 @@ public class NewEmpty
 
             
 
-            System.out.println("Would you like to play again? Y/N");
+            System.out.println("Play again? y or n ");
 
             String answer = input.next(); 
 
