@@ -1,0 +1,97 @@
+package rollingdie;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Cindy
+ */
+public class RollingDie {
+    static Scanner input = new Scanner (System.in);
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args)
+    
+        {
+        // TODO code application logic here      
+        
+        System.out.println(" Let's play an odd and even game!!!");
+        do{
+            playAround();
+        }while(askForAnotherRound());
+        System.out.println(" thank you for playing");
+        }
+     
+        public static void playAround(){
+        boolean validInput;
+       
+            
+
+     // get die 
+    Die die1;          
+    die1 = new Die();      
+    die1.roll();
+    System.out.println(" Odd (1) or Even (2)");
+    int guess_die = input.nextInt();
+    System.out.println(" Die: " + die1);
+       
+        }
+    
+   
+        public static boolean askForAnotherRound(){
+            while(true){
+                String answer;
+                System.out.println("play again?? y or n");
+                answer = input.next();
+                if (answer.equalsIgnoreCase("y"))
+                return true;
+                else if (answer.equalsIgnoreCase("n"))
+                return false;
+            }
+        }
+}  
+
+
+
+
+
+
+package rollingdie;
+
+/**
+ *
+ * @author Cindy
+ */
+public class Die {
+    private final int MAX = 6;
+    
+    private int faceValue;
+    
+    public Die()
+    {
+        faceValue = 1;
+    }
+    
+    public int roll()
+    {
+        faceValue = (int) (Math.random() * MAX) +1;
+        return faceValue;
+    }
+    
+    public void setFaceValue(int value){
+        faceValue = value;
+    }
+    
+    public int getFaceValue(){
+        return faceValue;
+    }
+    
+    public String toString(){
+        String result = Integer.toString(faceValue);
+        
+        return result;
+    }
+    
+}
+
