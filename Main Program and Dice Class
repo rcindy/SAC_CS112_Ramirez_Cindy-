@@ -1,0 +1,122 @@
+package homework9;
+import java.util.Scanner;
+import java.util.Random;
+
+/**
+ *
+ * @author Cindy
+ */
+public class Homework9 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        // TODO code application logic here
+    System.out.println(" How many dices do you want to roll: ");
+    System.out.println(" (1): One dice (2): Two die (3): Three die");
+    
+    
+    
+    int die1;
+    int die2;
+    int die3;
+    int roll_1 = 0;
+    int roll_2 = 0;
+    int roll_3 = 0;
+    int user_answer;
+    
+    die1 = (int) (Math.random()*6)+1; // 1-6
+    die2 = (int) (Math.random()*6)+1; // 1-6
+    die3 = (int) (Math.random()*6)+1; // 1-6
+         
+    
+    user_answer = input.nextInt();
+   // one dice
+   if (user_answer == 1) {
+       roll_1 = die1;
+       //System.out.println(" Your total is " + roll_1);
+   }
+    
+    // two die 
+    if (user_answer == 2){
+        roll_2 = die1 + die2;
+        //System.out.println(" die1: " + die1 + " die 2: " + die2);
+        //System.out.println(" Your total is " + roll_2);
+    }
+    
+    // three die 
+    if (user_answer == 3) {
+        roll_3 = die1 + die2 + die3;
+        //System.out.println(" die1: " + die1 + " die 2: " + die2 + " die3: " + die3);
+        //System.out.println(" Your total is " + roll_3);
+    }
+    
+   // guess the die or dice total number 
+   System.out.println(" Guess the dice or die number based on number of dices rolled");
+   System.out.println(" One dice is: 1-6; Two die is: 2-12; Three die is: 3-18");
+   int user_guessdice = input.nextInt();
+   
+   // check user_guessdice
+   System.out.println(" you guess is " + user_guessdice);
+   System.out.println(" Dice 1 was: " + roll_1);
+   System.out.println(" Die 2 was: " + roll_2);
+   System.out.println(" Die 3 was: " + roll_3);
+   
+   
+
+   
+   
+    }
+    
+}
+
+// dice class 
+
+package homework9;
+//import java.util.Scanner;
+/**
+ *
+ * @author Cindy
+ */
+public class Dice {
+    int die1;
+    int die2;
+    int die3;
+    int roll_1;
+    int roll_2;
+    int roll_3;
+    int user_answer;
+    
+    public Dice(){
+        roll();
+    }
+    
+    public void roll(){
+    die1 = (int) (Math.random()*6)+1; // 1-6
+    die2 = (int) (Math.random()*6)+1; // 1-6
+    die3 = (int) (Math.random()*6)+1; // 1-6
+    }
+    
+    public int getdie1(){
+        return die1;
+    }
+    public int getdie2(){
+        return die2;
+    }
+    public int getdie3(){
+        return die3;
+    }
+    public int getTotal(){
+        return die1;
+    }
+    public int getTotal_2() {
+        return die1 + die2;
+    }
+    public int getTotal_3() {
+        return die1 + die2 + die3;
+    }
+    
+   
+    }
