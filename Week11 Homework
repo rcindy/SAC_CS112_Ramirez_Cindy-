@@ -1,0 +1,130 @@
+package javaapplication46;
+
+/**
+ *
+ * @author Cindy
+ */
+public class Automobile {
+    private String name;
+    private String color;
+    private int doors;
+    private int cylinders;
+    private String hornSound;
+    private String Sound;
+    
+    public Automobile(String name, String color, int doors, int cylinders, String hornSound){
+        this.name = name;
+        this.color = color;
+        this.doors = doors;
+        this.cylinders = cylinders;
+        this.hornSound = hornSound;
+   
+   
+        }  // this is impornat 
+    public void setName(String nm){
+        name = nm;
+    }
+    
+    public String getName(String nm){
+        return name;
+    }
+    
+    public void setColor(String cl){
+        color = cl;
+    }
+    
+    public int getDoors(int ds){
+        return doors;
+    }
+    
+
+public void setDoors(int ds){
+        doors = ds;
+    }
+    
+    public void setCylinders(int cyl){
+        cylinders = cyl;
+    }
+    
+    public int getCylinders(int cyl){
+        return cylinders;
+
+}
+    
+    public void sethornSound(String hs){
+        hornSound = hs;
+    }
+    
+    public String gethornSound(String hs){
+        return hornSound;
+    }
+
+   
+    
+    String Description(){
+        String Automobile = name + color;
+        return Automobile;
+       
+    }
+    
+   public String Honks(){
+        String Honks = hornSound;
+        return Honks;
+    }
+    
+    public static String Honk(){
+        return "beep beep beep";
+    }
+    
+    public String Honks(String Sound){
+        //return "beeeeeeepp";
+        //this.Sound = Sound;
+        return Sound;
+    }
+
+     
+     @Override public String toString(){
+       return String.format( "Car: " + color + " doors: " + doors + " name "  + name + "HornSound" + hornSound);
+     
+
+       
+       
+    }
+     
+   
+
+    
+    
+
+    
+}
+package javaapplication46;
+
+/**
+ *
+ * @author Cindy
+ */
+public class JavaApplication46 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        
+        Automobile C = new Automobile(" Cabbie ", "yellow ", 4, 2, " bebop");
+        Automobile S = new Automobile(" sporty ", " red ", 4, 3, " beeep");
+        Automobile V = new Automobile(" vany ", "green ",5, 4," beep ");
+        Automobile car = new Automobile(" car ", " pink ", 4,4,"");
+        
+        System.out.println(C.Description() + "honks" + C.Honks());
+        System.out.println(S.Description() + "honks" + S.Honks());
+        System.out.println(V.Description() + "honks" + V.Honks());
+        System.out.println(car.Description() + " honks " + car.Honk());
+        
+        System.out.println(car.Description() + "honks" + car.Honks(" beeeeeeeeeeeppppppp"));
+       
+    }
+    
+}
