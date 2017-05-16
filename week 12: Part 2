@@ -1,0 +1,80 @@
+
+
+
+public class ThreeDice {
+    private int die1 = 1 + (int)(Math.random()*10);
+    private int die2 = 1 + (int)(Math.random()*10);
+    private int die3 = 1 + (int)(Math.random()*10);
+    
+    public void setThrow1(){
+        this.die1=die1;
+    }
+    
+    public void setThrow2(){
+        this.die2 = die2;
+    }
+    
+    public void setThrow3(){
+        this.die3= die3;
+    }
+    
+    public int getDie1(){
+        return die1;
+    }
+    
+    public int getDie2(){
+        return die2;
+    }
+    
+    public int getDie3(){
+        return die3;
+    }
+    
+   
+        
+    public int Throw(){
+        int total = die1 + die2 + die3;
+        int new_total = total/3;
+        return new_total;
+       
+    }
+    
+   @Override
+   public String toString(){
+       return String.format("%s %s %s ", die1);
+       //System.out.println(" dice ");
+   }
+   
+    
+    
+    
+}
+
+public class TestThreeDie {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        ThreeDice roll = new ThreeDice();
+        System.out.println(roll.Throw());
+        
+       
+        
+        
+        
+    }
+    
+}
+
+
+public class Dice {
+   
+    public int Throw(){
+        return 1 + (int)(Math.random()*10);
+    }
+    
+    
+}
