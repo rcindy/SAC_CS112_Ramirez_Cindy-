@@ -1,0 +1,100 @@
+
+public class Dice {
+    TripleDice obj1 = new TripleDice();
+    
+    public String toString(){
+        return String.format(obj1.toString());
+    }
+}
+
+
+import java.util.Scanner;
+/**
+ *
+ * @author Cindy
+ */
+public class Tester_HW13 extends TripleDice{
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        //boolean play = true;
+        int count = 1;
+        int i = 1;
+        boolean loop = true;
+        // TODO code application logic here
+        //boolean play = true;
+        do{
+        try{
+        int die = (int) (Math.random()*6)+1;
+        //System.out.println(" Lets play! how many dice do you want to throw");
+        //int user_decide = scan.nextInt();
+        System.out.println(" What did the dice throw?");
+        int user_guess = scan.nextInt();
+        
+        System.out.println(" the dice rolled " + die );
+         //
+         
+         System.out.println(" Play again? 1 yes or 2 no");
+         int playAgain = scan.nextInt();
+         System.out.println(" number of time played "+  count++);
+    //count++;
+    
+}
+        catch(Exception e){
+            System.out.println("Only 4 game tries");
+          
+        if (count++ < 4){
+            throw e;
+        }
+        }
+        
+      
+        } while(loop);
+}
+}
+
+
+import java.util.IllegalFormatException;
+/**
+ *
+ * @author Cindy
+ */
+public class TripleDice extends Dice{
+    TripleDice obj2 = new TripleDice();
+   
+    
+    //Throw method
+    
+    public int Throw(){
+        int die1 = 1 + (int)(Math.random()*6);
+        return die1;
+        
+    }
+    
+    public boolean equals(TripleDice obj)
+
+	{
+
+		if(this.Throw()==obj2.Throw())return true;
+
+		
+
+                else 
+                      return false;
+
+	}
+
+    @Override
+	public String toString()
+
+	{
+
+		return String.format("the dice is :%d",Throw());
+
+	}
+    
+    
+}
