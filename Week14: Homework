@@ -1,4 +1,4 @@
-package humanpowercycles_tester;
+1package humanpowercycles_tester;
 import java.util.Scanner;
 import java.lang.*;
 /**
@@ -20,7 +20,7 @@ public class HumanPowerCycles_Tester { // implemented interface
        
         // TODO code application logic here
        //HumanPowerCyclesList HPC = new HumanPowerCyclesList();
-         BaseClass[] HumanPowerCycles = new BaseClass[3];
+         BaseClass[] HumanPowerCycles = new BaseClass[1];
        for(i =0; i< HumanPowerCycles.length; i++){
            
         System.out.println(" Enter the gear for Unicycle: 1, 2 or 3 ");
