@@ -1,0 +1,281 @@
+package humanpowercycles_tester;
+import java.util.Scanner;
+import java.lang.*;
+/**
+ *
+ * @author Cindy
+ */
+public class HumanPowerCycles_Tester { // implemented interface 
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int i = 0;
+        int speed = 0;
+        int speed2 = 0;
+        int speed3 = 0;
+        
+       
+        // TODO code application logic here
+       //HumanPowerCyclesList HPC = new HumanPowerCyclesList();
+         BaseClass[] HumanPowerCycles = new BaseClass[3];
+       for(i =0; i< HumanPowerCycles.length; i++){
+           
+        System.out.println(" Enter the gear for Unicycle: 1, 2 or 3 ");
+        int enterGear = scan.nextInt();
+        //theList[i].setCurrentgear(enterGear);
+        if(enterGear== 1){
+
+//System.out.println("5 is the speed"); 
+            speed = 5;
+        }
+        else if (enterGear == 2){
+            speed = 6;
+        }
+        else
+            speed = 8;
+        
+       
+
+
+       //Unicycle W1u = new Unicycle(1,3,"W1u", "no color", speed);
+       //theList[i] = new Unicycle(1,3,"W1u", "no color",0);
+        //System.out.println(" the list is:" + theList.length);
+          // theList[i] = new Unicycle(1,3,"W1u", "no color",0);
+           // Unicycle W1u = new Unicycle(1,3,"W1u", "no color", speed);
+           // System.out.println("Unicycle \n" + W1u.toString());
+        //System.out.println("Unicycle \n" + W1u.toString());
+        // number 2
+        
+
+
+        System.out.println("Enter gear for Bicycle: 1 2 3 4 or 5 ");
+        int enterGear2 = scan.nextInt();
+        if(enterGear2 == 1){
+        //System.out.println(" Speed = 6");
+        speed2 = 6;
+        }
+        else if(enterGear2 == 2){
+        // System.out.println("Speed = 7");
+        speed2 = 7;                   // renamed speed to speed2 
+
+}
+        else if (enterGear2 == 3){
+        //System.out.println("Speed = 8");
+        speed2 = 8;                    // renamed speed to speed2 
+        }
+        else if(enterGear2 == 4){
+        //System.out.println("Speed = 9");
+        speed2 = 9;                      // renamed speed to speed2 
+        }
+        else
+
+speed2 = 10;                     // renamed speed to speed2
+        //System.out.println(" speed = 10");
+        //Bicylce W2b = new Bicylce(2,5,"W2b", "no color", speed2);
+        //System.out.println("Bicycle \n" + W2b.toString());
+        
+        
+        
+        
+        System.out.println(" Enter gear for Tricycle: 1, 2, 3, 4, or 5");
+        int enterGear3 = scan.nextInt();
+        if(enterGear3 == 1){
+        // System.out.println(" speed = 6");
+        speed3 = 6;
+        }
+        else if (enterGear3 == 2){
+        //System.out.println(" speed = 7");
+        speed3 = 7;
+        }
+        else if (enterGear3 == 3){
+        //System.out.println(" speed = 8");
+        speed3 = 8;
+        }
+        else if (enterGear3 == 4){
+        speed3 = 9;
+        // System.out.println(" speed = 9");
+        }
+        else if (enterGear3 == 5){
+        speed3 = 10;
+
+// System.out.println(" speed = 10");
+        }
+       
+        }
+       
+        for(int r =0; r<HumanPowerCycles.length; r++){
+        Unicycle W1u = new Unicycle(1,3,"W1u", "no color", speed);
+        System.out.println("Unicycle \n" + W1u.toString());
+        
+        Bicylce W2b = new Bicylce(2,5,"W2b", "no color", speed2);
+
+System.out.println("Bicycle \n" + W2b.toString());
+       
+        Tricycle W3t = new Tricycle(2,5,"W3t", "no color", speed3);
+        System.out.println("Tricycle \n" + W3t.toString());
+     
+          
+        }
+       
+
+
+
+}
+}
+
+
+
+
+
+package humanpowercycles_tester;
+
+/**
+
+*
+ * @author Cindy
+ */
+public class Unicycle extends BaseClass {
+    
+   // Create a (sub)class of Unicycle with 1 wheel and 3 grears.  
+    //Speed of each gear is 1=5MPH, 2=6MPH, 3=8MPH.  
+    //Override GetCurrentSpeed
+    
+    Unicycle(int Wheels, int Gears, String Name, String Color,int Speed){
+
+super(Wheels, Gears, Name, Color, Speed);
+    }
+  
+
+  
+
+   
+    
+    @Override
+    public int getCurrentSpeed(){
+    return speed;
+}
+    
+    
+    
+    @Override
+    public String toString(){
+        return super.toString();
+    }
+    
+    
+}
+
+
+
+
+
+package humanpowercycles_tester;
+
+/**
+ *
+ * @author Cindy
+ */
+public class Bicylce extends BaseClass {
+    
+    public Bicylce(int Wheels, int Gears, String Name, String Color, int Speed) {
+        super(Wheels, Gears, Name, Color, Speed);
+    }
+    
+    @Override
+    public int getCurrentSpeed(){
+    return speed;
+}
+    
+    
+    @Override
+    public String toString(){
+        return super.toString();
+    }
+    
+}
+
+
+
+package humanpowercycles_tester;
+
+/**
+ *
+ * @author Cindy
+ */
+public class Tricycle extends BaseClass  {
+    
+    public Tricycle(int Wheels, int Gears, String Name, String Color, int Speed) {
+        super(Wheels, Gears, Name, Color, Speed);
+    }
+    
+    @Override
+    public int getCurrentSpeed(){
+    return speed;
+}
+    
+    
+    @Override
+    public String toString(){
+        return super.toString();
+    }
+    
+    
+}
+
+
+
+package humanpowercycles_tester;
+
+/**
+ *
+ * @author Cindy
+ */
+public class BaseClass extends HumanPowerCycles_Tester {
+  
+    
+    
+    //attribbutes 
+    public int wheels =0;
+    public int gears=0; 
+    public String name;
+    public String color; 
+    public int speed=0;
+    
+    
+    // one constructor 
+    public BaseClass(int Wheels, int Gears, String Name, String Color, int Speed){
+        wheels = Wheels;
+        gears = Gears; 
+        name = Name;
+        color = Color;
+        speed = Speed; 
+    }
+   
+    //methods
+    
+    public void setCurrentgear(int newValue){
+        gears = newValue;
+    }
+    
+    public void setCurrentSpeed(int increment){
+        speed = increment;
+    }
+    
+    public int getGear(){
+        return gears;
+    }
+    
+    public int getCurrentSpeed(){
+        return speed;
+    }
+    
+    public String toString(){
+        return("Number of wheels: " + wheels + " Number of gears: "+ gears + " Name: "+ name + " Color: " + color + " Speed: " + speed);
+    }
+   
+    
+}
+
